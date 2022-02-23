@@ -7,13 +7,19 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { TimeComponent } from './time/time.component';
+import { CoffeeheaderComponent } from './coffeeheader/coffeeheader.component';
+import { CoffeecrouserComponent } from './coffeecrouser/coffeecrouser.component';
+import { CoffeefooterComponent } from './coffeefooter/coffeefooter.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    TimeComponent
+    TimeComponent,
+    CoffeeheaderComponent,
+    CoffeecrouserComponent,
+    CoffeefooterComponent
   ],
   imports: [
     BrowserModule,

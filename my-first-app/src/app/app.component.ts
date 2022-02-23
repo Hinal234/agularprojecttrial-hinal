@@ -14,10 +14,14 @@ export class AppComponent {
     this.count+=1;
   }
 
-  fname = "";
+  // fname = "";
 
-  inputValue(){
-    this.fname="Hinal";
+  // inputValue(){
+  //   this.fname="Hinal";
+  // }
+  callValue(){
+    
+
   }
 
 }
