@@ -2,9 +2,18 @@
 
 
 <div class="container">
-  <div class="row">
+  
     <button class="btn btn-primary" (click)="countValue()">Click Me</button>
     <p>{{count}}</p>
-  </div>
+<br>
+
+<label>FirstName:</label>
+<input type="text" name="firstname" value="{{fname}}">
+<button class="btn btn-primary" (click)="inputValue()">FillName</button>
+    
+<p>Property Binding</p>
+<img [src]="imgUrl"> 
+
+
 
 </div>
