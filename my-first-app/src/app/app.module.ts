@@ -10,6 +10,8 @@ import { TimeComponent } from './time/time.component';
 import { CoffeeheaderComponent } from './coffeeheader/coffeeheader.component';
 import { CoffeecrouserComponent } from './coffeecrouser/coffeecrouser.component';
 import { CoffeefooterComponent } from './coffeefooter/coffeefooter.component';
+import { ProductComponent } from './product/product.component';
+import { DescriptionComponent } from './description/description.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { CoffeefooterComponent } from './coffeefooter/coffeefooter.component';
     TimeComponent,
     CoffeeheaderComponent,
     CoffeecrouserComponent,
-    CoffeefooterComponent
+    CoffeefooterComponent,
+    ProductComponent,
+    DescriptionComponent
   ],
   imports: [
     BrowserModule,

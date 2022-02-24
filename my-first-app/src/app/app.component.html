@@ -44,7 +44,79 @@
         <td></td>
       </tr>
     </tbody>
-  </table> -->
+  </table> 
 
 
-<app-coffeeheader></app-coffeeheader>
+<app-coffeeheader></app-coffeeheader> -->
+
+<!-- <div class="container">
+  <label>FirstName  : </label>
+  <input name="firstname" [(ngModel)]="fname">
+  <p> Your name is {{fname}}</p>
+  <label>LastName  :</label>
+  <input name="lastname" [(ngModel)]="lname">
+  <p>{{lname}}</p>
+
+  <label>Address  :</label>
+  <input name="address" [(ngModel)]="address">
+  <p>{{address}}</p>
+  <label>Email  :</label>
+  <input name="Email" [(ngModel)]="email">
+  <p>{{email}}</p>
+</div>
+
+<div *ngIf="able">
+
+  <p>Some Element</p>
+</div> -->
+
+<!-- <input name="getNumber" [(ngModel)]="gnumber">
+
+<div *ngIf="gnumber%2==0">
+  <p>{{gnumber}} </p>
+  <p> Entered number is Even</p>
+</div> 
+<div *ngIf="gnumber%2!=0">
+  <p>{{gnumber}} </p>
+  <p> Entered Number is Odd</p>
+</div> 
+
+<div class="container">
+  <div *ngFor=" let numArray of numArrays">
+    {{numArray}}
+  </div>
+
+  <div *ngFor=" let strArray of strArrays">
+    {{strArray}}
+  </div>
+</div>
+
+<h4>Print String</h4>
+<div class="container">
+    <div *ngFor="let strArray of strArrays">
+      <div *ngIf="strArray.length>5">
+        <p>{{strArray.length}}</p>
+        <p>{{strArray}}</p>
+      </div>
+    </div>
+
+</div>
+
+<h4>Odd Location</h4>
+<div class="container">
+  <div *ngFor="let strArray of strArrays; let i=index">
+    <div *ngIf="i%2==0">
+      <p>{{strArray}}</p>
+    </div>
+  </div>
+</div>
+<app-header [itemreceived]="itemsent"></app-header>
+<button type="button" ></button>
+ -->
+
+
+ <app-header></app-header>
+
+
+
+

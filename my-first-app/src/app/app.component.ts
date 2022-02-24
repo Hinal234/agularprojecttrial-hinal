@@ -21,7 +21,25 @@ export class AppComponent {
   // }
   callValue(){
     
-
   }
+
+  fname="Hinal";
+  lname="Hapani";
+  address=" ";
+  email = " ";
+
+  able = true;
+  gnumber =0;
+
+
+  numArrays = [1,2,3,4,5,6];
+  strArrays = ["James","Martin","aaa","Goslin"];
+
+  itemsent="laptop";
+
+
+
+
+
 
 }

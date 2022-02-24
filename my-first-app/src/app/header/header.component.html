@@ -1,2 +1,20 @@
-<p>header works!</p>
-<app-footer></app-footer>
+ 
+<!-- <p>{{itemreceived}}</p> -->
+
+<!-- <app-footer [itemtoget]="itemtogo" [itemtoget2]="itemtogo2"></app-footer> -->
+<!-- <app-footer [arrget]="arrgo"></app-footer> -->
+<!-- <p>Counter value is : </p> -->
+<div class="container1">
+<ul>
+    <!-- <li *ngFor="let counter of counters">
+        {{counter}}
+    </li> -->
+    <!-- <p>{{count}}</p> -->
+    <p>Cart</p>
+    <p>{{count}}</p>
+    
+</ul>
+</div>
+
+
+  <app-product (newItemEvent)="incrementcounter($event)"></app-product>
