@@ -1,6 +1,8 @@
 img{
     height: 300px;
     width: 300px;
+    border-radius: 4px;
+    
   }
 .container{
   background-color: cadetblue;
