@@ -16,3 +16,27 @@
     padding: 20px;
   } */
   
+  .red{
+    color: red;
+  }
+
+  .yellow{
+    color: yellow;
+  }
+  .green{
+    color:green;
+  }
+  tr,td{
+    border: 1px solid black;
+  }
+  .aqua{
+    background-color: aqua;
+  }
+
+  .grey{
+    background-color: grey;
+  }
+  .cart{
+    background-color: darkgray;
+    color: brown;
+  }

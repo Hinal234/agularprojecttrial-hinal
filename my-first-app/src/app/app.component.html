@@ -115,7 +115,86 @@
  -->
 
 
- <app-header></app-header>
+ <!-- <app-header></app-header> -->
+
+ <!-- <div class="container">
+    <p [ngClass]="item>10?'red': 'yellow'">{{item}}</p>
+    <p [ngClass]="classfeature()">{{item}}</p>
+
+    <div *ngFor="let newArray of newArrays">
+        <p [ngClass]="newArray%2==0?'red': 'yellow'">{{newArray}}</p>
+    </div>
+
+    <button type="button" class="btn btn-success" (click)="enable()">Enble</button>
+      <button type="button" class="btn btn-primary" (click)="disable()" >Disable</button>
+      {{str}}
+
+    <div class="container">
+      <button [ngStyle]="{background:'yellow'}">Click Me</button>
+      <button [ngStyle]="appendstyle">Click Me</button>
+    </div>
+  
+    <table>
+
+      <tr>
+        <td>id</td>
+        <td>name</td>
+        <td>username</td>
+        <td>address</td>
+        <td>City</td>
+        <td>phone</td>
+        <td>website</td>
+        <td>Delete</td>
+      </tr>
+
+      <tr *ngFor="let data of jsondata" [ngClass]="data.id%2==0?'grey' :'aqua'">
+        <td>{{data.id}}</td>
+        <td>{{data.name}}</td>
+        <td>{{data.username}}</td>
+        <td>{{data.address.street}}</td>
+        <td>{{data.address.city}}</td>
+        <td>{{data.phone}}</td>
+        <td>{{data.website}}</td>
+        <td><button class="btn btn-primary" (click)="deletedata(data)">Delete</button></td>
+      </tr>
+    
+    
+  </table>
+
+ </div>
+ -->
+<div class="cart">
+<h2>Cart : {{counter}} </h2>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+    
+      <th scope="col">Name</th>
+      <th scope="col">Price</th>
+      <th scope="col">Quantity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cartItem of cartItems">
+      
+      <td>{{cartItem.name}}</td>
+      <td>{{cartItem.price}}</td>
+      <td>{{cartItem.Qty}}</td>
+    </tr>
+    <tr>
+    
+      <td>Total</td>
+      <td>{{totalAmt}}</td>
+      <td></td>
+    </tr>
+    
+  </tbody>
+</table>
+ 
+  <app-productdescription (descriptionItemEvent)="addItemToCart($event)"></app-productdescription>
+  
 
 
 

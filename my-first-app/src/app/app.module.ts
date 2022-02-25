@@ -12,6 +12,7 @@ import { CoffeecrouserComponent } from './coffeecrouser/coffeecrouser.component'
 import { CoffeefooterComponent } from './coffeefooter/coffeefooter.component';
 import { ProductComponent } from './product/product.component';
 import { DescriptionComponent } from './description/description.component';
+import { ProductdescriptionComponent } from './productdescription/productdescription.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { DescriptionComponent } from './description/description.component';
     CoffeecrouserComponent,
     CoffeefooterComponent,
     ProductComponent,
-    DescriptionComponent
+    DescriptionComponent,
+    ProductdescriptionComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,15 @@
+
+
+    <div class="container">
+        <div class="row">
+            <h1 id="product">Product</h1>
+          <div class="col-sm" *ngFor="let product of productdata">
+            <img src={{product.url}}>
+           <h5> Name : {{product.name}}</h5>
+           <h5>Price(RS) : {{product.price}}</h5>
+           <h6>Quantity : {{product.Qty}}</h6>
+            <button type="button" class="btn btn-success" (click)="addToCartEvent(product)">Add To Cart</button> 
+          </div>
+        </div>
+      </div>
+  

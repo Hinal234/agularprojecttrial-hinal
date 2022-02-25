@@ -24,8 +24,5 @@ export class ProductComponent implements OnInit {
    }else{
      this.desc=false;
    }
-
   }
-  
-
 }
