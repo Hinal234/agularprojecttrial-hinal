@@ -68,6 +68,23 @@ export class AppComponent {
 
     }
 
+    from:any;
+    to:any;
+    price:any;
+
+     printDays(from:any,to:any,price:any){
+
+        this.from = new Date(from).getTime();
+        this.to=new Date(to).getTime();
+        let day =(this.to-this.from)/(1000*3600*24);
+        console.log(from);
+        console.log(to);
+        console.log(day);
+        console.log("total Amount : "+ (day*price));
+      
+
+    }
+
 
 
 

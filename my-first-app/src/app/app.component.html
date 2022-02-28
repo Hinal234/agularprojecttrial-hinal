@@ -308,3 +308,11 @@ Enter Number:
 <h3 *ngFor="let result of table, let i=index">
   {{number}} * {{i+1}} = {{result}};
 </h3>
+
+<form>
+    From:<input type="date" name="fromdate" #from id="fromdate"><br><br>
+    To: <input type="date" name="todate" #to id="todate"><br><br>
+    Price : <input type="number" name="price" #price><br>
+    <button type="submit" (click)="printDays(from.value, to.value, price.value)">submit</button>
+
+</form>
