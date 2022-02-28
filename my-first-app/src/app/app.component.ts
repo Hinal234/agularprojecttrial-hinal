@@ -1,11 +1,68 @@
 import { Component } from '@angular/core';
 
+import { DatetimeService } from './datetime.service';
+import { JsondataService } from './jsondata.service';
+import { FormdataService } from './formdata.service';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  
+   getdate:any;
+   getinfo:any;
+   jsondata:any;
+   count=0;
+   item:any; 
+
+   constructor(public dt:DatetimeService,private data:JsondataService,public form:FormdataService){
+    
+   this.getdate = this.dt.today;
+
+   this.getinfo = [10,20,30];
+
+   this.jsondata = this.data.jsondata1;
+
+
+   this.count = this.dt.increment();
+
+}
+
+
+    user={
+      "email":'',
+      "password":'',
+      "city":'',
+      "address":'',
+      "address2":'',
+      "zip":''
+    };
+
+    onSubmitofform(user:any){
+      console.log(user);
+
+    }
+
+    userdata={
+      "firstname":'',
+      "lastname":'',
+      "email":'',
+      "password":''
+    };
+
+    onSubmit(userdata:any){
+      this.userdata=userdata;
+      this.form.sendData(this.userdata);
+    }
+
+    number=0;
+    printNumber(){
+      console.log(this.number);
+    }
+
+
 
 
   // imgUrl = ".././assets/images/image.jpg";
@@ -303,28 +360,28 @@ export class AppComponent {
   //     }
   //   }
   // ]
-  cartItems=[
-    {
-      "id":'',
-      "name":'',
-      "price":'',
-      "Qty":'',
-      "location":'',
-      "stock":'',
-      "url":''
+//   cartItems=[
+//     {
+//       "id":'',
+//       "name":'',
+//       "price":'',
+//       "Qty":'',
+//       "location":'',
+//       "stock":'',
+//       "url":''
 
-    }
-  ];
-  totalQty= 0;
-  totalAmt=0;
+//     }
+//   ];
+//   totalQty= 0;
+//   totalAmt=0;
 
- counter=0;
-  addItemToCart(product: any){
-    this.counter++;
-    this.cartItems.push(product);
-    this.totalQty +=Number(product.Qty);
-    this.totalAmt +=Number(product.price);
-  }
+//  counter=0;
+//   addItemToCart(product: any){
+//     this.counter++;
+//     this.cartItems.push(product);
+//     this.totalQty +=Number(product.Qty);
+//     this.totalAmt +=Number(product.price);
+//   }
 
   
 

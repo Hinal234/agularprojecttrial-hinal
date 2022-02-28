@@ -13,6 +13,8 @@ import { CoffeefooterComponent } from './coffeefooter/coffeefooter.component';
 import { ProductComponent } from './product/product.component';
 import { DescriptionComponent } from './description/description.component';
 import { ProductdescriptionComponent } from './productdescription/productdescription.component';
+import { DatetimeService } from './datetime.service';
+import { JsondataService } from './jsondata.service';
 
 @NgModule({
   declarations: [
@@ -25,14 +27,15 @@ import { ProductdescriptionComponent } from './productdescription/productdescrip
     CoffeefooterComponent,
     ProductComponent,
     DescriptionComponent,
-    ProductdescriptionComponent
+    ProductdescriptionComponent,
+  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [DatetimeService , JsondataService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

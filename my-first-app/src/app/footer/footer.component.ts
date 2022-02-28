@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+//import { DatetimeService } from '.././datetime.service';
+import { FormdataService } from '.././formdata.service';
 
 @Component({
   selector: 'app-footer',
@@ -7,7 +9,8 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  //constructor(public Info: DatetimeService) { }
+  constructor(public data: FormdataService) { }
 
   ngOnInit(): void {
   }
@@ -15,6 +18,10 @@ export class FooterComponent implements OnInit {
   @Input() itemtoget2 ="";
 
   @Input() arrget:any
+
+
+
+  
 
 
 }
