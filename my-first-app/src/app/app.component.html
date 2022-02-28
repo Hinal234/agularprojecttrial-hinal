@@ -302,5 +302,9 @@
   <app-footer></app-footer>
  -->
 Enter Number:
-<input type="number" id="number" [ngModel]="number">
-<button type="button" (click)="printNumber()">Submit</button>
+<input type="text" id="number" [(ngModel)]="number">
+<button type="button" (click)="printTable()">Submit</button>
+
+<h3 *ngFor="let result of table, let i=index">
+  {{number}} * {{i+1}} = {{result}};
+</h3>

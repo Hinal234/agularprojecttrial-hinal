@@ -57,10 +57,17 @@ export class AppComponent {
       this.form.sendData(this.userdata);
     }
 
-    number=0;
-    printNumber(){
+    table:any=[];
+    number='';
+    printTable(){
       console.log(this.number);
+
+      for(let i=1;i<=10;i++){
+        this.table.push(i*Number(this.number));
+      }
+
     }
+
 
 
 
