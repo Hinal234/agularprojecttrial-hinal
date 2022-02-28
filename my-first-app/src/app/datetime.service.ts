@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -11,10 +12,6 @@ export class DatetimeService {
     counter=0;
     increment(){
       return this.counter++;
-    }
-
-    getName(fname:string){
-        return fname;
     }
 
     
