@@ -1,0 +1,10 @@
+.container{
+    margin-top: 20px;
+    margin-left: 40px;
+}
+input{
+    margin: 15px;
+}
+.container,h1{
+    text-align: center;
+}
