@@ -319,4 +319,68 @@
 
 <!-- <app-reactiveformmodule></app-reactiveformmodule> -->
 
-<app-reactive-address-form></app-reactive-address-form>
+
+<!-- 
+<app-reactive-address-form></app-reactive-address-form> -->
+
+<table *ngFor="let d of result">
+  <tr>
+<td>{{ d.name }}</td>
+<td>{{d.username}}</td>
+</tr>
+</table>
+<br>
+<div>
+
+</div>
+<div class="container">
+    <form>
+      <div>
+        <label>Entre ID : <input type="number" [(ngModel)]="id" name="id"></label>
+      </div>
+      <div>
+      <button type="button" class="btn btn-primary" (click)="data(id)">GetDate</button>
+      </div>
+      <label>
+        Name : <input type="text" [(ngModel)]="name" name="name" placeholder="{{name}}">
+      </label> 
+      <label> 
+        UserName : <input type="text" [(ngModel)]="username" name="username" placeholder="{{ username }}">
+      </label>
+    </form>
+
+</div>
+
+<h2>POST Method</h2>
+<form>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label>Name</label>
+      <input type="name" class="form-control" id="name" placeholder="name">
+    </div>
+    <div class="form-group col-md-6">
+      <label >Username</label>
+      <input type="password" class="form-control" id="username" placeholder="username">
+    </div>
+  </div>
+
+  <div class="form-group col-md-6">
+    <label >Email</label>
+    <input type="email" class="form-control" id="email" placeholder="email">
+  </div>
+
+  
+  <div class="form-group col-md-6">
+    <label >Phone</label>
+    <input type="phone" class="form-control" id="phone" placeholder="phone">
+  </div>
+
+  
+  <div class="form-group col-md-6">
+    <label >Website</label>
+    <input type="text" class="form-control" id="website" placeholder="website">
+  </div>
+<br>
+
+  <button type="submit" class="btn btn-primary">Sign in</button>
+</form>

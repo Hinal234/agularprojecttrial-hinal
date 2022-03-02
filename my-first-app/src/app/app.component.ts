@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Observable, subscribeOn } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { HttpDataRequestService } from './http-data-request.service';
 
 import { DatetimeService } from './datetime.service';
 import { JsondataService } from './jsondata.service';
@@ -11,82 +14,82 @@ import { FormdataService } from './formdata.service';
 })
 export class AppComponent {
   
-   getdate:any;
-   getinfo:any;
-   jsondata:any;
-   count=0;
-   item:any; 
+//    getdate:any;
+//    getinfo:any;
+//    jsondata:any;
+//    count=0;
+//    item:any; 
 
-   constructor(public dt:DatetimeService,private data:JsondataService,public form:FormdataService){
+//    constructor(public dt:DatetimeService,private data:JsondataService,public form:FormdataService){
     
-   this.getdate = this.dt.today;
+//    this.getdate = this.dt.today;
 
-   this.getinfo = [10,20,30];
+//    this.getinfo = [10,20,30];
 
-   this.jsondata = this.data.jsondata1;
-
-
-   this.count = this.dt.increment();
-
-}
+//    this.jsondata = this.data.jsondata1;
 
 
+//    this.count = this.dt.increment();
+
+// }
 
 
 
-    user={
-      "email":'',
-      "password":'',
-      "city":'',
-      "address":'',
-      "address2":'',
-      "zip":''
-    };
 
-    onSubmitofform(user:any){
-      console.log(user);
 
-    }
+//     user={
+//       "email":'',
+//       "password":'',
+//       "city":'',
+//       "address":'',
+//       "address2":'',
+//       "zip":''
+//     };
 
-    userdata={
-      "firstname":'',
-      "lastname":'',
-      "email":'',
-      "password":''
-    };
+//     onSubmitofform(user:any){
+//       console.log(user);
 
-    onSubmit(userdata:any){
-      this.userdata=userdata;
-      this.form.sendData(this.userdata);
-    }
+//     }
 
-    table:any=[];
-    number='';
-    printTable(){
-      console.log(this.number);
+//     userdata={
+//       "firstname":'',
+//       "lastname":'',
+//       "email":'',
+//       "password":''
+//     };
 
-      for(let i=1;i<=10;i++){
-        this.table.push(i*Number(this.number));
-      }
+//     onSubmit(userdata:any){
+//       this.userdata=userdata;
+//       this.form.sendData(this.userdata);
+//     }
 
-    }
+//     table:any=[];
+//     number='';
+//     printTable(){
+//       console.log(this.number);
 
-    from:any;
-    to:any;
-    price:any;
+//       for(let i=1;i<=10;i++){
+//         this.table.push(i*Number(this.number));
+//       }
 
-     printDays(from:any,to:any,price:any){
+//     }
 
-        this.from = new Date(from).getTime();
-        this.to=new Date(to).getTime();
-        let day =(this.to-this.from)/(1000*3600*24);
-        console.log(from);
-        console.log(to);
-        console.log(day);
-        console.log("total Amount : "+ (day*price));
+//     from:any;
+//     to:any;
+//     price:any;
+
+//      printDays(from:any,to:any,price:any){
+
+//         this.from = new Date(from).getTime();
+//         this.to=new Date(to).getTime();
+//         let day =(this.to-this.from)/(1000*3600*24);
+//         console.log(from);
+//         console.log(to);
+//         console.log(day);
+//         console.log("total Amount : "+ (day*price));
       
 
-    }
+//     }
 
 
 
@@ -410,7 +413,30 @@ export class AppComponent {
 //     this.totalAmt +=Number(product.price);
 //   }
 
+constructor(private ht:HttpDataRequestService){}
+
+result:any;
+ngOnInit() {
+
+  this.ht.getdata().subscribe((data) => this.show(data));
+  //subscribe((data) => console.log(data));
+}
+
+show(data:any){
+  this.result = data;
+}
+id='';
+name='';
+username="";
+
+data(id:any){
+  console.log(id);
+  this.name = this.result[id].name;
+  this.username = this.result[id].username;
   
+}
+
+
 
 
 }
