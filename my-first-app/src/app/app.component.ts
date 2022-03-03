@@ -6,6 +6,7 @@ import { HttpDataRequestService } from './http-data-request.service';
 import { DatetimeService } from './datetime.service';
 import { JsondataService } from './jsondata.service';
 import { FormdataService } from './formdata.service';
+import { UserService } from './user.service';
 
 @Component({
   selector: 'app-root',
@@ -436,6 +437,17 @@ data(id:any){
   
 }
 
+user = {
+  
+}
+
+processData(data:any){
+
+}
+userRegForm(){
+  console.log(this.userRegForm.value);
+  this.userService.user(this.userRegForm.value).subscribe(user => console.log(user));
+}
 
 
 

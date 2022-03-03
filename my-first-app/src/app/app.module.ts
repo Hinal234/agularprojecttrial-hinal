@@ -20,6 +20,7 @@ import { DatetimeService } from './datetime.service';
 import { JsondataService } from './jsondata.service';
 import { ReactiveformmoduleComponent } from './reactiveformmodule/reactiveformmodule.component';
 import { ReactiveAddressFormComponent } from './reactive-address-form/reactive-address-form.component';
+import { UserService } from './user.service';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,7 @@ import { ReactiveAddressFormComponent } from './reactive-address-form/reactive-a
     HttpClientModule
 
   ],
-  providers: [DatetimeService , JsondataService ],
+  providers: [DatetimeService , JsondataService, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

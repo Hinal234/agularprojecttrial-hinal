@@ -352,7 +352,7 @@
 </div>
 
 <h2>POST Method</h2>
-<form>
+<form #myForm="ngForm" (ngSubmit)="userRegForm()" >
   <div class="form-row">
     <div class="form-group col-md-6">
       <label>Name</label>
